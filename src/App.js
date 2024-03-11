@@ -1,24 +1,38 @@
-import logo from './logo.svg';
+
+// import { Outlet } from 'react-router-dom';
 import './App.css';
+import Header from './layout/Header';
+import Card from './pages/Card';
+import Home from './pages/Home';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header/>
+      <Home/>
+      <Card>
+      <div className="cards">
+      <div className='card'>
+        <div className='cardicon'><i class="fa-solid fa-folder"></i></div>
+        <div className='cardtitle'>Featured title</div>
+        <div className='cardinfo'>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</div>
+        <div className='cardlink'><a href="">Call to action</a></div>
+      </div>
+      <div className='card'>
+        <div className='cardicon'><i class="fa-solid fa-house"></i></div>
+        <div className='cardtitle'>Featured title</div>
+        <div className='cardinfo'>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</div>
+        <div className='cardlink'><a href="">Call to action</a></div>
+      </div>
+      <div className='card'>
+        <div className='cardicon'><i class="fa-solid fa-right-left"></i></div>
+        <div className='cardtitle'>Featured title</div>
+        <div className='cardinfo'>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</div>
+        <div className='cardlink'><a href="">Call to action</a></div>
+      </div>
+      </div>
+      </Card>
+    </>
   );
 }
 
